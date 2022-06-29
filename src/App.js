@@ -34,9 +34,54 @@ class App extends Component {
       let vowelsArray = currentWord.split("").filter(vowel => {
         return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
       })
-      console.log("vowelsArray:", vowelsArray)
+      // console.log("vowelsArray:", vowelsArray)
 
       // your code here!
+        // let translate = (str) => {
+        // let allWords = []
+        // let currentWord = ""
+
+        // str.split.map (value => {
+        
+        //   let firstVowel = value.index(/[aeiou]/) 
+    // #dat first vowel occurence
+
+    // if (firstVowel == 0) {
+    // #words that begin with a vowel
+    // return currentWord = value + "ay"
+
+
+    // } else if 
+    //     (value.include("qu")) {
+    // #words that don't begin with a vowel but include "qu".
+  //       firstVowel = value.index(/[aeio]/) 
+  //       // #first vowel not counting "u"
+  //       let startIndex = value.index("q")
+  //       let prefix = value[0..firstVowel-1] + "ay"
+  //       let currentValue = value[firstVowel-1] + prefix
+  //       return currentValue
+  //       }
+
+
+  //   if (firstVowel >= 1) {
+  //   // #values that don't begin with vowels or have "qu"
+  //       let prefix = value[0..firstVowel-1] + "ay" 
+  //       let currentValue = value[firstVowel-1] + prefix
+  //       return currentValue
+      
+  //   }
+  // })
+
+  // [allWords].join("")
+
+// "{[all_values].join(" ")}" 
+// }
+      // console.log(translate)  
+
+          
+      
+       
+        
 
     //  Rules of Pig Latin
 // For words beginning with a vowel, add "way" to the end.
@@ -51,26 +96,28 @@ class App extends Component {
 // As a user, when I click Submit, I see a Pig Latin translation of the sentence I entered.
 // As a user, the page is styled, and pleasing to use.
 
-let translatePigLatin =(str) =>  {
-    let currentWord = "";
+  //  let translatePigLatin =(str) =>  {
+      //  let currentWord = "";
 
-    if (vowelsArray.indexOf(str[0]) > -1) {
-        currentWord = str + "way";
-        return currentWord;
+    if (vowelsArray.indexOf(currentWord[0]) > -1) {
+        currentWord = currentWord + "way";
+        return console.log(currentWord);
     } else {
-        let firstMatch = str.match(/[aeiou]/g) || 0;
-        let vowel = str.indexOf(firstMatch[0]);
-        currentWord = str.substring(vowel) + str.substring(0, vowel) + "ay";
+        let firstMatch = currentWord.match(/[aeiou]/g) || 0;
+        let vowel = currentWord.indexOf(firstMatch[0]);
+        
+        currentWord = currentWord.substring(vowel) + currentWord.substring(vowel, 0) + "ay";
         return currentWord;
     }
-}
-console.log(translatePigLatin("apple"))
-//console.log(translatePigLatin(this.state.phrase))
-//console.log(translatePigLatin(this.state.phraseTranslated))
+  // }
+
+// console.log(translatePigLatin("apple"))
+//  console.log(translatePigLatin(this.state.phrase))
+// console.log(translatePigLatin(this.state.phraseTranslated))
 
       // Remember: console.log is your friend :)
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
-      return (this.state.phraseTranslated)
+      // return (translatePigLatin(currentWord))
     })
 
     // joining the array back to a string of translated words
