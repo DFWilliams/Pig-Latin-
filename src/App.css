@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+/* .background {
+  background-image: radial-gradient(circle, #823dc1, #6e37ad, #5b3099, #4a2986, #392272, #521f6f, #651b6a, #761964, #a9215f, #d13c51, #eb643d, #f49223);  
+  background-size: cover;
+  width: 100%;
+  color: transparent;
+} */
+
+
 body {
   margin: 1rem;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Paytone One', sans-serif;
   text-align: center;
+  background-image: radial-gradient(circle, #823dc1, #6e37ad, #5b3099, #4a2986, #392272, #521f6f, #651b6a, #761964, #a9215f, #d13c51, #eb643d, #f49223);  
+  color: orange;
+  position: relative
+
 }
 
 h1 {
@@ -12,14 +26,20 @@ button {
   margin: 4rem;
   border-radius: 0.9rem;
   padding: 1rem;
-  border-color: aqua;
+  border-color: #EF02F3;
+  
 }
 
 footer {
   padding: 2rem;
+  position: relative;
 }
 
-.butcherPig {
+.title {
+  position: relative
+}
+
+.pigChat {
   width: 12rem;
 }
 
@@ -32,10 +52,18 @@ footer {
 }
 
 .inputArea {
-  background-color: pink;
-  color: #fff;
+  background-image: linear-gradient(to right top, #f37b5e, #f98054, #fd8748, #ff8e3a, #ff972a, #ff9232, #ff8d39, #ff8940, #ff7a5b, #ff6f75, #fa698d, #e96aa3);  color: #fff;
   border-radius: .5rem;
-  padding: 1rem;
+  border-color: #EF02F3;
+  padding: 1rem
+}
+
+.translation {
+ border-radius: .5 rem;
+}
+
+.latin {
+  font-size: 36px;
 }
 
 @media only screen and (max-width: 650px) {
